@@ -6,10 +6,10 @@ router.post("/", withAuth, (req, res) => {
     const body = req.body;
     console.log(req.session.userId);
     Post.create({ ...body, userId: req.session.userId })
-      .then(newPost => {
+    .then(newPost => {
         res.json(newPost);
-      })
-      .catch(err => {
+    })
+    .catch(err => {
         res.status(500).json(err);
     });
 });
@@ -21,14 +21,14 @@ router.put("/:id", withAuth, (req, res) => {
         id: req.params.id
       }
     })
-      .then(affectedRows => {
+    .then(affectedRows => {
         if (affectedRows > 0) {
           res.status(200).end();
         } else {
           res.status(404).end();
         }
-      })
-      .catch(err => {
+    })
+    .catch(err => {
         res.status(500).json(err);
     });
 });
@@ -40,14 +40,14 @@ router.delete("/:id", withAuth, (req, res) => {
         id: req.params.id
       }
     })
-      .then(affectedRows => {
+    .then(affectedRows => {
         if (affectedRows > 0) {
           res.status(200).end();
         } else {
           res.status(404).end();
         }
-      })
-      .catch(err => {
+    })
+    .catch(err => {
         res.status(500).json(err);
     });
 });
