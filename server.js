@@ -2,19 +2,12 @@ const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
-const mongoose = require("mongoose");
 const app = express();
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 
 const sequelize = require("./config/connection.js");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
-
-mongoose.connect(process.env.MONGODB_URI||"mongodb://localhost/budget", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
 
 const sess = {
   secret: "Super secret secret",
