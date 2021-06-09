@@ -4,6 +4,8 @@ const session = require("express-session");
 const exphbs = require("express-handlebars");
 const app = express();
 
+require('dotenv').config();
+
 const PORT = process.env.PORT || 8080;
 
 const sequelize = require("./config/connection.js");

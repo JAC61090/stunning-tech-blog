@@ -1,7 +1,8 @@
 # Stunning-Tech-Blog App 
 
-deployable link 
-https://jac61090.github.io/stunning-tech-blog/
+Repo/Deployable link 
+- https://jac61090.github.io/stunning-tech-blog/
+- 
 
 # Description
 A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well.
